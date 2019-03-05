@@ -46,10 +46,10 @@ public class SwaggerConfig implements WebMvcConfigurer {
 
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
-            .title("城市消防监控后台管理系统")
-            .description("city-fire文档")
-            .termsOfServiceUrl("http://www.baidu.com")
-            .version("2.1")
+            .title("学生活动管理系统")
+            .description("系统描述")
+            .termsOfServiceUrl("http://www.cuit.edu.cn")
+            .version("1.0")
             .build();
     }
 

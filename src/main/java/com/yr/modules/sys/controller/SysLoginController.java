@@ -61,20 +61,21 @@ public class SysLoginController extends AbstractController {
 		}
 
 		//用户信息
-		SysUserEntity user = sysUserService.queryByUserName(form.getUsername());
+//		SysUserEntity user = sysUserService.queryByUserName(form.getUsername());
+		SysUserEntity usernew = sysUserService.queryByAccount(form.getAccount());
 
 		//账号不存在、密码错误
-		if(user == null || !user.getPassword().equals(new Sha256Hash(form.getPassword(), user.getSalt()).toHex())) {
+		if(usernew == null || !usernew.getPassword().equals(new Sha256Hash(form.getPassword(), usernew.getSalt()).toHex())) {
 			return R.error("账号或密码不正确");
 		}
 
 		//账号锁定
-		if(user.getStatus() == 0){
+		if(usernew.getStatus() == 0){
 			return R.error("账号已被锁定,请联系管理员");
 		}
 
 		//生成token，并保存到数据库
-		R r = sysUserTokenService.createToken(user.getUserId());
+		R r = sysUserTokenService.createToken(usernew.getUserId());
 		return r;
 	}
 

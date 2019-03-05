@@ -10,7 +10,7 @@ import java.util.Date;
  *
  *
  * @author yr
- * @date 2018-12-17 09:25:46
+ * @date 2018-2-17 09:25:46
  */
 @TableName("cf_adandonrecord")
 public class AdandonrecordEntity implements Serializable {

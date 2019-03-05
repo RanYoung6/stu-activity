@@ -32,6 +32,10 @@ public interface SysUserService extends IService<SysUserEntity> {
 	SysUserEntity queryByUserName(String username);
 
 	/**
+	 * 根据账号，查询系统用户
+	 */
+	SysUserEntity queryByAccount(String account);
+	/**
 	 * 保存用户
 	 */
 	void save(SysUserEntity user);

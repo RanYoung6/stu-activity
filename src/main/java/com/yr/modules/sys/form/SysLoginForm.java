@@ -6,6 +6,7 @@ package com.yr.modules.sys.form;
  */
 public class SysLoginForm {
     private String username;
+    private String account;
     private String password;
     private String captcha;
     private String uuid;
@@ -40,5 +41,13 @@ public class SysLoginForm {
 
     public void setUuid(String uuid) {
         this.uuid = uuid;
+    }
+
+    public String getAccount() {
+        return account;
+    }
+
+    public void setAccount(String account) {
+        this.account = account;
     }
 }

@@ -32,13 +32,20 @@ public class SysUserEntity implements Serializable {
 	private String username;
 
 	/**
+	 * 账号
+	 *
+	 */
+	 @NotBlank(message = "账号不能为空",groups = {AddGroup.class, UpdateGroup.class})
+	 private String account;
+
+	/**
 	 * 密码
 	 */
 	@NotBlank(message="密码不能为空", groups = AddGroup.class)
 	private String password;
 
 	/**
-	 * 盐
+	 * 盐加密(系统登录口令的加密方式)
 	 */
 	private String salt;
 
@@ -209,5 +216,13 @@ public class SysUserEntity implements Serializable {
 
 	public void setSalt(String salt) {
 		this.salt = salt;
+	}
+
+	public String getAccount() {
+		return account;
+	}
+
+	public void setAccount(String account) {
+		this.account = account;
 	}
 }

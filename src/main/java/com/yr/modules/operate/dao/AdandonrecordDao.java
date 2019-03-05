@@ -9,7 +9,7 @@ import org.apache.ibatis.annotations.Mapper;
  *
  *
  * @author yr
- * @date 2018-12-17 09:25:46
+ * @date 2018-2-17 09:25:46
  */
 @Mapper
 public interface AdandonrecordDao extends BaseMapper<AdandonrecordEntity> {

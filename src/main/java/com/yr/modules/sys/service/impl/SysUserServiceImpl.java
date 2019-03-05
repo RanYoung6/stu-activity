@@ -64,6 +64,10 @@ public class SysUserServiceImpl extends ServiceImpl<SysUserDao, SysUserEntity> i
 	public SysUserEntity queryByUserName(String username) {
 		return baseMapper.queryByUserName(username);
 	}
+	@Override
+	public SysUserEntity queryByAccount(String account){
+		return  baseMapper.queryByAccount(account);
+	}
 
 	@Override
 	@Transactional
